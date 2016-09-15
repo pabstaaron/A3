@@ -29,26 +29,24 @@ void Trie::addWord(string word){
       Node* n = new Node();
       current.setNodeAt(c, n);
       current = *(n);
-    }
 
     if(i == word.length()-1)
       current.setWordEnd(true);
-  }
+    }
+ }
 }
-
 bool Trie::isWord(string word){
   Node current = head;
-  for(uint i = 0; i < word.length(); i++){
+   for(uint i = 0; i < word.length(); i++){
     Node* next = current.getNodeAt(word[i]);
     
-    if(next == nullptr && !current.isWordEnd())
-      return false;
-    else if(next == nullptr && current.isWordEnd())
-      return true;
+    if(next == nullptr)
+      return current.isWordEnd();
     else{
       current = *(next);
     }
-  }
+   }
+  
 
   if(current.isWordEnd())
     return true;
