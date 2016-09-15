@@ -1,0 +1,18 @@
+#include <string>
+#include <vector>
+
+class Trie{
+ public:
+  Trie();
+  // TODO: Destructor?
+  
+  Trie(const Trie& other);
+
+  Trie& operator=(Trie other);
+
+  void addWord(std::string word);
+
+  bool isWord(std::string word);
+
+  std::vector<std::string> allWordsWithPrefix(std::string prefix);
+};

@@ -1,0 +1,27 @@
+#include "trie.h"
+#include <string>
+#include <vector>
+
+using namespace std;
+
+Trie::Trie(){
+
+}
+
+Trie::Trie(const Trie& other){
+
+}
+
+Trie& Trie::operator=(Trie other){
+
+}
+
+void Trie::addWord(string word){
+
+}
+
+bool Trie::isWord(string word){
+  return false;
+}
+
+vector<string> allWordsWithPrefix(string prefix);
